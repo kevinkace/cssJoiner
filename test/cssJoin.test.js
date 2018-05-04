@@ -40,6 +40,12 @@ test("if test param is false, returns first className", () => {
     expect(cssJoin([!test, "class1"])).toBe("class1");
 });
 
+test("expression in test, returns first className", () => {
+    const test = "true";
+
+    expect(cssJoin([test === "true", "class1"])).toBe("class1");
+});
+
 test("test and join", () => {
     expect(cssJoin([true, "class1", "class2"], "class3")).toBe("class1 class3");
 });
