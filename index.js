@@ -20,6 +20,10 @@ module.exports = function join(...classes) {
     return classes.reduce((acc, className, idx) => {
         const space = idx ? " " : "";
 
+        if(!className) {
+            return acc;
+        }
+
         if(typeof className === "string") {
             return acc + space + className;
         }
