@@ -25,3 +25,14 @@ cssJoin(css.btn, [ btnType === "primary", css.primary ])
 cssJoin(css.btn, [ btnType === "primary", css.primary, css.secondary ])
 // "button buttonPrimary" or "button buttonSecondary"
 ```
+
+An example with Mithril
+
+```js
+const component = {
+    view : (vnode) =>
+        m("div", {
+            class : cssJoin(btnCss.btn, [ vnode.state.selected, css.selected ])
+        })
+};
+```
