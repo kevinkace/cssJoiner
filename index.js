@@ -17,9 +17,11 @@
 // -> "button buttonSecondary"
 
 module.exports = function join(...classes) {
-    return classes.reduce((acc, className) => {
+    return classes.reduce((acc, className, idx) => {
+        const space = idx ? " " : "";
+
         if(typeof className === "string") {
-            return `${acc} ${className}`;
+            return acc + space + className;
         }
 
         const test       = className[0];
@@ -27,11 +29,11 @@ module.exports = function join(...classes) {
         const falseClass = className[2];
 
         if(test) {
-            return `${acc} ${trueClass}`;
+            return acc + space + trueClass;
         }
 
         if(falseClass) {
-            return `${acc} ${falseClass}`;
+            return acc + space + falseClass;
         }
 
         return acc;
