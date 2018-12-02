@@ -1,6 +1,6 @@
 {
-  "name": "css-join",
-  "version": "2.0.0",
+  "name": "cssjoiner",
+  "version": "2.0.1",
   "description": "",
   "main": "dist/cjs.js",
   "module": "dist/esm.js",
