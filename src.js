@@ -1,22 +1,6 @@
-// join("button", "buttonPrimary");
-// -> "button buttonPrimary"
+"use strict";
 
-// join(css.btn, css.btnPrimary);
-// -> "button buttonPrimary"
-
-// join(css.btn, [isPrimary, css.btnPrimary])
-// -> "button buttonPrimary",
-// -> "button"
-
-// join(css.btn, [isPrimary, css.btnPrimary, css.btnSecondary])
-// -> "button buttonPrimary"
-// -> "button buttonSecondary"
-
-// join(css.btn, [!isPrimary, css.btnSecondary])
-// -> "button"
-// -> "button buttonSecondary"
-
-module.exports = function join(...classes) {
+module.exports = function cssJoin(...classes) {
     return classes.reduce((acc, className, idx) => {
         const space = idx ? " " : "";
 
@@ -43,3 +27,18 @@ module.exports = function join(...classes) {
         return acc;
     }, "");
 };
+
+module.exports.header = "";
+
+module.exports.jsdoc = `/**
+ * Class array
+ * @typedef {Object} ClassType
+ * @property {Object} 0 - Condition to decide which/whether class
+ * @property {string} 1 - true class name
+ * @property {string} 2 - false class name
+ */
+
+/**
+ * Conditionally join CSS class names
+ * @param {...string|ClassType} classes - css class name string, or array [ condition, trueClass, falseClass ]
+*/`;

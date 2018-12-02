@@ -1,4 +1,5 @@
-const cssJoin = require("../");
+// const cssJoin = require("../");
+const cssJoin = require("../dist/cjs");
 
 test("joins 2 class names", () => {
     expect(cssJoin("class1", "class2")).toBe("class1 class2");
