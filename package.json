@@ -6,16 +6,19 @@
   "module": "dist/esm.js",
   "scripts": {
     "test": "jest",
-    "build": "node build.js"
+    "build": "node build.js",
+    "publish-please": "publish-please",
+    "prepublishOnly": "publish-please guard"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "publish-please": "^5.4.2"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/kevinkace/cssJoin"
+    "type": "git",
+    "url": "https://github.com/kevinkace/cssJoin"
   }
 }
