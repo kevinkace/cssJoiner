@@ -1,5 +1,7 @@
 # cssJoin
 
+Conditionally join CSS classes.
+
 ## Examples
 
 Simple joining 2 class names.
