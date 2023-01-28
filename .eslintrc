@@ -1,0 +1,37 @@
+{
+    "extends" : [ "arenanet" ],
+    "env": {
+        "node" : true
+    },
+    "rules": {
+        "max-len" : "off"
+    },
+    "overrides": [
+        {
+            "files" : [
+                "./test/**/*.*"
+            ],
+            "env": {
+                "jest": true
+            }
+        },
+        {
+            "files" : [
+                "./test/sample.js"
+            ],
+            "env": {
+                "browser": true
+            },
+            "parserOptions": {
+                "ecmaVersion": "latest",
+                "sourceType": "module",
+                "ecmaFeatures": {
+                    "jsx": true
+                }
+            },
+            "rules": {
+                "no-restricted-syntax": "off"
+            }
+        }
+    ]
+}
