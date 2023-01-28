@@ -13,17 +13,17 @@ exports.jsdoc = `/**
  * @param {...string|ClassType} classes - css class name string, or array [ condition, trueClass, falseClass ]
 */`;
 
-exports.cssJoin = function cssJoin(...classes) {
+exports.cssJoiner = function cssJoiner(...classes) {
     return classes.reduce((acc, className, idx) => {
         const space = idx ? " " : "";
 
         // bad data
-        if(!className) {
+        if (!className) {
             return acc;
         }
 
         // just a class name
-        if(typeof className === "string") {
+        if (typeof className === "string") {
             return acc + space + className;
         }
 
@@ -36,11 +36,11 @@ exports.cssJoin = function cssJoin(...classes) {
         const trueClass  = className[1];
         const falseClass = className[2];
 
-        if(test) {
+        if (test) {
             return acc + space + trueClass;
         }
 
-        if(falseClass) {
+        if (falseClass) {
             return acc + space + falseClass;
         }
 

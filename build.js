@@ -24,7 +24,7 @@ export default {src}
 function stringify(moduleType, src) {
     return moduleType.tmpl
         .replace("{jsdoc}", src.jsdoc)
-        .replace("{src}", src.cssJoin.toString());
+        .replace("{src}", src.cssJoiner.toString());
 }
 
 Promise.all(
