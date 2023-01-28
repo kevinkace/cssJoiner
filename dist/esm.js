@@ -10,17 +10,17 @@
  * Conditionally join CSS class names
  * @param {...string|ClassType} classes - css class name string, or array [ condition, trueClass, falseClass ]
 */
-export default function cssJoin(...classes) {
+export default function cssJoiner(...classes) {
     return classes.reduce((acc, className, idx) => {
         const space = idx ? " " : "";
 
         // bad data
-        if(!className) {
+        if (!className) {
             return acc;
         }
 
         // just a class name
-        if(typeof className === "string") {
+        if (typeof className === "string") {
             return acc + space + className;
         }
 
@@ -33,11 +33,11 @@ export default function cssJoin(...classes) {
         const trueClass  = className[1];
         const falseClass = className[2];
 
-        if(test) {
+        if (test) {
             return acc + space + trueClass;
         }
 
-        if(falseClass) {
+        if (falseClass) {
             return acc + space + falseClass;
         }
 

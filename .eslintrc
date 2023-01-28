@@ -32,6 +32,14 @@
             "rules": {
                 "no-restricted-syntax": "off"
             }
+        },
+        {
+            "files" : [
+                "./dist/esm.js"
+            ],
+            "parserOptions": {
+                "sourceType": "module"
+            }
         }
     ]
 }
