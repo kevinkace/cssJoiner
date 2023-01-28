@@ -1,4 +1,4 @@
-# cssJoinerer
+# cssJoiner
 
 Conditionally join CSS classes.
 
