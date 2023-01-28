@@ -1,5 +1,7 @@
 # cssJoiner
 
+[![Node.js Package](https://github.com/kevinkace/cssJoin/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/kevinkace/cssJoin/actions/workflows/npm-publish.yml)
+
 Conditionally join CSS classes.
 
 ## Examples
