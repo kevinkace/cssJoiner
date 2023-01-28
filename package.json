@@ -1,6 +1,6 @@
 {
   "name": "cssjoiner",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Conditionally join CSS classes.",
   "main": "dist/cjs.js",
   "module": "dist/esm.js",
